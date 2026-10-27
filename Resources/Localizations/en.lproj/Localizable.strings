@@ -1,0 +1,2 @@
+/* English is the source language: the code's own strings are used as they are.
+   This file only tells macOS that the app has an English localization. */

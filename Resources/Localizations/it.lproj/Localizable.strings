@@ -1,0 +1,18 @@
+/* Finder menu */
+"New File" = "Nuovo file";
+"Text File" = "File di testo";
+"Rich Text" = "Testo formattato";
+"Shell Script" = "Script shell";
+"Empty File" = "File vuoto";
+"untitled" = "senza titolo";
+
+/* App window */
+"Quit FinderNewFile" = "Esci da FinderNewFile";
+"Right-click empty space in any Finder window and choose New File." = "Fai clic destro su uno spazio vuoto in una finestra del Finder e scegli Nuovo file.";
+"The Finder extension is on." = "L'estensione del Finder è attiva.";
+"The Finder extension is off." = "L'estensione del Finder non è attiva.";
+"Extension Settings…" = "Impostazioni estensione…";
+"Turn On…" = "Attiva…";
+"Open Templates Folder" = "Apri cartella modelli";
+"Put any file in the templates folder, like an empty Word, Excel or Pages document, and it shows up in the New File menu too." = "Metti un file qualsiasi nella cartella dei modelli, ad esempio un documento Word, Excel o Pages vuoto, e comparirà anche nel menu Nuovo file.";
+"You can quit this app: the menu keeps working while it's closed." = "Puoi chiudere questa app: il menu continua a funzionare anche quando è chiusa.";
