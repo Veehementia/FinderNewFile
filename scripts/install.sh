@@ -9,10 +9,14 @@ EXTENSION_ID="com.matteonardone.FinderNewFile.Extension"
 
 pkill -x FinderNewFile 2>/dev/null || true
 rm -rf /Applications/FinderNewFile.app
-cp -R build/FinderNewFile.app /Applications/
 
-# Register only the installed copy, so Finder doesn't pick the one in build/.
+# Moved rather than copied: Spotlight would find a copy left in build/ and list the app twice,
+# and Finder could pick its extension. Forget the build/ copy first, while its path still exists.
 pluginkit -r "$PWD/build/FinderNewFile.app/Contents/PlugIns/FinderNewFileExtension.appex" 2>/dev/null || true
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
+    -u "$PWD/build/FinderNewFile.app" 2>/dev/null || true
+mv build/FinderNewFile.app /Applications/
+
 pluginkit -a /Applications/FinderNewFile.app/Contents/PlugIns/FinderNewFileExtension.appex
 pluginkit -e use -i "$EXTENSION_ID"
 

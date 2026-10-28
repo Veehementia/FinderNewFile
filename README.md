@@ -28,11 +28,11 @@ cd FinderNewFile
 ./scripts/install.sh
 ```
 
-The script builds the app, copies it to `/Applications`, turns on the Finder extension, relaunches Finder and opens the app. If the menu doesn't appear, click **Turn On…** in the app (System Settings → General → Login Items & Extensions → Finder).
+The script builds the app, moves it to `/Applications`, turns on the Finder extension, relaunches Finder and opens the app. If the menu doesn't appear, click **Turn On…** in the app (System Settings → General → Login Items & Extensions → Finder).
 
 The first time you create a file on the Desktop or in Documents or Downloads, macOS may ask to allow access to that folder.
 
-To build without installing, run `./scripts/build.sh`. The app goes to `build/FinderNewFile.app`. To sign with your own certificate instead of ad-hoc:
+To build without installing, run `./scripts/build.sh`. The app goes to `build/FinderNewFile.app`, where Spotlight lists it as a second copy until you install or delete it. To sign with your own certificate instead of ad-hoc:
 
 ```bash
 SIGN_IDENTITY="Apple Development: Your Name (TEAMID)" ./scripts/install.sh
